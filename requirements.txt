@@ -6,6 +6,5 @@ matplotlib
 streamlit == 1.5.1
 seaborn
 sklearn
-pickle
 ipywidgets
 IPython
