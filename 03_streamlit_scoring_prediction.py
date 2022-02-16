@@ -13,9 +13,8 @@ import pickle
 ###########################################################################
 ###########################################################################
 #les pickles sont stockés dans le sous-répertoire deployment
-PROJECT_DIR = os.path.dirname(os.path.realpath("__file__"))
-MODEL_PATH    = os.path.join(PROJECT_DIR , "scoring.pkl")
-REF_PATH    = os.path.join(PROJECT_DIR , "treshold.pkl")
+MODEL_PATH    = "scoring.pkl"
+REF_PATH    = "treshold.pkl"
 
 
 ############################################################################
