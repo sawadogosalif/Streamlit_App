@@ -2,7 +2,7 @@
 
 import os
 import pandas as pd
-import pickle5 as pickle
+import pickle
 
 
 
@@ -13,8 +13,9 @@ import pickle5 as pickle
 ###########################################################################
 ###########################################################################
 #les pickles sont stockés dans le sous-répertoire deployment
-MODEL_PATH    = "scoring.pkl"
-REF_PATH    = "treshold.pkl"
+PROJECT_DIR = os.path.dirname(os.path.realpath("__file__"))
+MODEL_PATH    = os.path.join(PROJECT_DIR , "scoring.pkl")
+REF_PATH    = os.path.join(PROJECT_DIR , "treshold.pkl")
 
 
 ############################################################################
@@ -75,14 +76,16 @@ X_profil = pd.DataFrame(     [[          Status_of_existing_checking_account,
                                              'Purpose', 'Other_installment_plans'
                                             ]
                         )
-proba = round(modele.predict(X_profil).iloc[0],3)
+
+  
+if(st.button("Calculer le score")): 
+    proba = round(modele.predict(X_profil).iloc[0],3)
 
 
-# appeler la fonclion cliked_button lorsqu'on appui sur cliquer
-st.subheader("Résultat du score")
-st.write(f"Probabilité calculée {proba}")
-if proba< ref:
-    st.success("Client crédible  : 👍 Go pour le crédit")
-else:
-    st.error("Probabilité >= 20% : 😭 Refus du crédit")
-    
+    # appeler la fonclion cliked_button lorsqu'on appui sur cliquer
+    st.subheader("Résultat du score")
+    st.write(f"Probabilité calculée {proba}")
+    if proba< ref:
+       st.success("Client crédible  : 👍 Go pour le crédit")
+    else:
+       st.error("Probabilité >= 20% : 😭 Refus du crédit")
