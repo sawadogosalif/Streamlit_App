@@ -10,3 +10,4 @@ ipywidgets
 IPython
 statsmodels
 pickle
+pickle5
