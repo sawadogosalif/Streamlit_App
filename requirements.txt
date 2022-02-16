@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+datetime
+matplotlib
+streamlit
+seaborn
+sklearn
+pickle
+ipywidgets
+IPython
