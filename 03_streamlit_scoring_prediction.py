@@ -2,7 +2,7 @@
 
 import os
 import pandas as pd
-import pickle
+import pickle5 as pickle
 
 
 
