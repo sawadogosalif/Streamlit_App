@@ -10,3 +10,5 @@ ipywidgets
 IPython
 statsmodels
 pickle5
+click==8.0.4
+
