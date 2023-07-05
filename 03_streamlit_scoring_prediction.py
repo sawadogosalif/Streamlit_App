@@ -25,7 +25,6 @@ REF_PATH    = os.path.join(PROJECT_DIR , "treshold.pkl")
 ############################################################################
 with open( MODEL_PATH, "rb" ) as f:
   modele = pickle.load(f)
-ref = pickle.load( open( REF_PATH, "rb" ) )
 with open( REF_PATH, "rb" ) as f:
   ref = = pickle.load(f)
 
