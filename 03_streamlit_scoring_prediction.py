@@ -2,7 +2,7 @@
 
 import os
 import pandas as pd
-import pickle5 as pickle
+import pickle
 
 
 
@@ -23,9 +23,11 @@ REF_PATH    = os.path.join(PROJECT_DIR , "treshold.pkl")
 # Rechargement de la pipeline de transformation et du modèle V1
 #  (seulement au lancement de l'application)
 ############################################################################
-modele = pickle.load( open( MODEL_PATH, "rb" ) )
+with open( MODEL_PATH, "rb" ) as f:
+  modele = pickle.load(f)
 ref = pickle.load( open( REF_PATH, "rb" ) )
-
+with open( REF_PATH, "rb" ) as f:
+  ref = = pickle.load(f)
 
 
 
